@@ -28,12 +28,32 @@ namespace W1002WPFCardDealer
         private void OnDeal(object sender, RoutedEventArgs e)
         {
             Random r = new Random();
+            int[] num = new int[5];
 
-            int n = r.Next(52);
+            for (int i = 0; i < num.Length; i++)
+            {
+                int n = 0;
+                do
+                {
+                    n = r.Next(52);
+                } while (num.Contains(n));
+                //} while (Array.IndexOf(num, n) > -1);
+                num[i] = n;
+            }
 
-            BitmapImage b = new BitmapImage(new Uri($"images/{GetCardName(n)}",
+            Array.Sort(num);
+
+            BitmapImage[] b = new BitmapImage[num.Length];
+
+            for (int i = 0; i < num.Length; i++)
+                b[i] = new BitmapImage(new Uri($"images/{GetCardName(num[i])}",
                     UriKind.RelativeOrAbsolute));
-            Card1.Source = b;
+
+            Card1.Source = b[0];
+            Card2.Source = b[1];
+            Card3.Source = b[2];
+            Card4.Source = b[3];
+            Card5.Source = b[4];
         }
 
         private string GetCardName(int c)

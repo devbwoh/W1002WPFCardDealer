@@ -13,9 +13,23 @@
                 Padding="8"
                 Margin="16" 
                 Click="OnDeal"/>
-        <Image x:Name="Card1"
-               Height="400"
+        <UniformGrid Rows="1"
+                     Background="#040">
+            <Image x:Name="Card1"
                Stretch="None"
-               Source="images/ace_of_hearts.png"/>
+               Source="images/black_joker.png"/>
+            <Image x:Name="Card2"
+               Stretch="None"
+               Source="images/black_joker.png"/>
+            <Image x:Name="Card3"
+               Stretch="None"
+               Source="images/black_joker.png"/>
+            <Image x:Name="Card4"
+               Stretch="None"
+               Source="images/black_joker.png"/>
+            <Image x:Name="Card5"
+               Stretch="None"
+               Source="images/black_joker.png"/>
+        </UniformGrid>
     </DockPanel>
 </Window>

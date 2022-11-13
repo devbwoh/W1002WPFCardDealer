@@ -11,7 +11,8 @@
                 x:Name="BtnDeal"
                 Content="카드 분배"
                 Padding="8"
-                Margin="16"/>
+                Margin="16" 
+                Click="OnDeal"/>
         <Image x:Name="Card1"
                Height="400"
                Stretch="None"

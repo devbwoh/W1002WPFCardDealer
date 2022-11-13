@@ -24,5 +24,11 @@ namespace W1002WPFCardDealer
         {
             InitializeComponent();
         }
+
+        private void OnDeal(object sender, RoutedEventArgs e)
+        {
+            BitmapImage b = new BitmapImage(new Uri("images/10_of_clubs.png", UriKind.RelativeOrAbsolute));
+            Card1.Source = b;
+        }
     }
 }

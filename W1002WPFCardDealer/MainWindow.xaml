@@ -13,6 +13,8 @@
                 Padding="8"
                 Margin="16"/>
         <Image x:Name="Card1"
-               Height="400"/>
+               Height="400"
+               Stretch="None"
+               Source="images/ace_of_hearts.png"/>
     </DockPanel>
 </Window>
